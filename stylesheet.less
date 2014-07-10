@@ -217,7 +217,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#202020', end
 		outline: none;
 		.transition( all, 0.5s, ease);
 	    @media @mobile {
-	    	right: 270px;
+	    	right: 248px;
 	    }
 	    &:hover {
 	    	background-color: fade(@color-swatch6, 25%);
@@ -232,7 +232,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#202020', end
 			background: white;
 			box-shadow: 0 6px 0 white, 0 12px 0 white;
 			@media @tablet {
-				top: 11px;
+				top: 20px;
 				right: 50px;
 			}
 			@media @mobile {
@@ -685,6 +685,11 @@ body.menu-active .bk-nav {
 
 
 /* 10. Forms & Buttons */
+
+.widget.button {
+	border-radius: 10px;
+	padding-top: 10px 0;
+}
 
 .widget.button button .widget.dropbox button {
 	border-radius: 10px;
