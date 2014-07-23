@@ -90,16 +90,7 @@
 }
 
 .bk-nav {
-	background: rgb(32,32,32); /* Old browsers */
-background: -moz-linear-gradient(top,  rgba(32,32,32,1) 0%, rgba(32,32,32,1) 40%, rgba(1,52,61,1) 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(32,32,32,1)), color-stop(40%,rgba(32,32,32,1)), color-stop(100%,rgba(1,52,61,1))); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  rgba(32,32,32,1) 0%,rgba(32,32,32,1) 40%,rgba(1,52,61,1) 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  rgba(32,32,32,1) 0%,rgba(32,32,32,1) 40%,rgba(1,52,61,1) 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  rgba(32,32,32,1) 0%,rgba(32,32,32,1) 40%,rgba(1,52,61,1) 100%); /* IE10+ */
-background: linear-gradient(to bottom,  rgba(32,32,32,1) 0%,rgba(32,32,32,1) 40%,rgba(1,52,61,1) 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#202020', endColorstr='#01343d',GradientType=0 ); /* IE6-9 */
-
-	border-left: 1px solid darken(@color-swatch6, 50%);
+	background: @color-swatch6;
 	height: 100%;
 	position: fixed;
 	right: -320px;
@@ -107,6 +98,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#202020', end
 	.transition( all, 0.5s, ease);
     z-index: 9999;
     .widget.socialicons {
+    	background: @color-swatch6;
     	border-left: 1px solid darken(@color-swatch6, 50%);
     	padding: 30px 15px;
     	margin: 0;
@@ -203,7 +195,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#202020', end
 	a.pull {
 		background-color: fade(@color-swatch6, 15%);
 		border: 1px solid fade(@color-swatch1, 20%);
-		.border-radius(6px 6px 0);
+		.border-radius(6px 0 0 6px);
 		padding: 12px 11px 0;
 		position: absolute;
 		right: 320px;
@@ -300,6 +292,11 @@ body.menu-active .bk-nav {
 
 /* 4. Feature */
 
+.widget.feature {
+	height: 100%;
+	width: 100%;
+}
+
 .widget.feature .feature-bgimg .content {
   	-webkit-animation: huerotate 18s infinite alternate;
   	animation: huerotate 24s infinite alternate;
@@ -315,12 +312,13 @@ body.menu-active .bk-nav {
 	background: linear-gradient(to top,  rgba(26,120,132,0.5) 0%,rgba(125,185,232,0) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a7884', endColorstr='#007db9e8',GradientType=0 ); /* IE6-9 */
 
-	padding-bottom: 26px;
+	padding: 100px 20px 26px;
 	text-align: center;
 	vertical-align: bottom;
 
 		@media only screen and (max-width: 650px) {
-		height: 450px;
+			padding: 100px 20px;
+			-webkit-overflow-scrolling: touch;
 		.spare {
 			position: relative;
 			top: 30px;
@@ -382,14 +380,6 @@ body.menu-active .bk-nav {
 			vertical-align: text-bottom;
 		}
 	}
-}
-
-.feature-img, .widget.feature {
-	width: 100%;
-	@media only screen and (max-width: 450px) {
-		height: 450px;
-	}
-
 }
 
 /* 5. Main */
@@ -856,4 +846,14 @@ hr.line {
 			}
 		}
 	}
+}
+
+/* Scrollbars */
+
+body, html {
+	-ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+	width: 0px!important;
 }
