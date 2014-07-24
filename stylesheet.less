@@ -250,11 +250,11 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 	display: block!important;
 }
 
-body.menu-active .widget.extendednavigation#slide-menu { 
+.menu-active .widget.extendednavigation#slide-menu { 
 	right: 0px; 
 }
 
-body.menu-active #main, body.menu-active .bk-header { 
+.menu-active #main, .menu-active .bk-header { 
 	right: 320px; 
 	.transition( all, 0.5s, ease);
     -webkit-backface-visibility: hidden;
@@ -263,12 +263,12 @@ body.menu-active #main, body.menu-active .bk-header {
     }
 }
 
-body #main, body .bk-header {
+#main, .bk-header, .bk-pt-home #main .widget.feature.bk-tpl-hidden + .bk-header {
 	.transition( all, 0.5s, ease);
 	-webkit-backface-visibility: hidden;
 }
 
-body.menu-active .bk-nav { 
+.menu-active .bk-nav { 
 	position: absolute;
 	right: 0; 
 }
@@ -295,14 +295,12 @@ body.menu-active .bk-nav {
 
 .widget.feature {
 	height: 100%;
-	width: 100%;
 }
 
 .widget.feature .feature-bgimg .content {
   	-webkit-animation: huerotate 18s infinite alternate;
   	animation: huerotate 24s infinite alternate;
 
-	width: 100%;
     height: 100%;
 
 	background: -moz-linear-gradient(bottom,  rgba(26,120,132,0.5) 0%, rgba(125,185,232,0) 100%); /* FF3.6+ */
@@ -386,12 +384,21 @@ body.menu-active .bk-nav {
     right: 0;
     width: 100%;
     height: 100%;
-    overflow: scroll;
+    overflow-y: scroll;
     background: #fcfeff;
     .border-radius(0px);
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    -webkit-overflow-scrolling: touch;
+}
+
+.bk-pt-home #main .widget.feature.bk-tpl-hidden + .bk-header {
+	background: lighten(@color-swatch6, 5%);
+	padding: 30px;
+	position: relative;
+	right: 0!important;
+	width: 100%;
 }
 
 /* 6. Footer */
