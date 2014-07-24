@@ -76,6 +76,7 @@
 	&.logo {
 		margin-right: 2px;
 		vertical-align: text-bottom;
+		width: 20%;
 		img {
 			vertical-align: top;
 		}
@@ -779,7 +780,75 @@ hr.line {
 	background-color: lighten(@color-swatch5, 75%)
 }
 
+.widget.twitter {
+    display: inline-block;
+    padding: 30px;
+    margin: 20px 0;
+    background-color: @color-swatch7;
+    @media @tablet {
+        display: block;
+    }
+    .twitter-profile-pic {
+        @media @mobile {
+            display: none;
+        }
+    }
+}
 
+.widget.twitter span, .widget.twitter time {
+  font-family: @font-swatch4-font-family;
+  font-weight: @font-swatch5-font-weight;
+  color: @color-swatch5;
+  font-size: 12px;
+  
+  text-decoration: none;
+}
+
+.widget.twitter a {
+   color: @color-swatch1;
+}
+
+.widget.twitter a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.widget.twitter ul {
+    padding: 0px;
+    margin: 0;
+}
+
+.widget.twitter ul li {
+    border-bottom: none;
+    list-style: none;
+    font-family: @font-swatch5-font-family;
+    color: @font-swatch5-color;
+    padding-bottom: 30px;
+}
+
+.widget.twitter ul li:last-child {
+    padding-bottom: 0px;
+}
+
+.widget.twitter ul li span a {
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.widget.twitter .twitter-content p {
+  font-size: 16px;
+  line-height: 30px;
+  // color: #ddd;
+}
+
+.widget.twitter .twitter-content span.bk-full-name {
+  font-family: @font-swatch4-font-family;
+  font-size: @font-swatch5-font-size;
+  color: @color-swatch2;
+  padding-bottom: 4px;
+  
+  letter-spacing: 0.05em;
+}
 
 .widget.socialicons, .widget.profile .bk-profile-socialicons,
 .bk-profile-socialicons {
