@@ -121,10 +121,10 @@
             "background-color-hover": "lighten(@color-swatch3,8%)"
         },
         "font8": {
-            "font-family": "\"Droid Sans\", Helvetica, Arial, sans-serif",
-            "font-size": "36px",
+            "font-family": "\"Georgia\", serif",
+            "font-size": "38px",
             "font-weight": "200",
-            "line-height": "74px",
+            "line-height": "50px",
             "color": "@color-swatch1",
             "letter-spacing": "inherit"
         },
