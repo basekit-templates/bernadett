@@ -121,10 +121,10 @@
             "background-color-hover": "lighten(@color-swatch3,8%)"
         },
         "font8": {
-            "font-family": "\"Lato\", Geneva, Tahoma, sans-serif",
-            "font-size": "42px",
+            "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
+            "font-size": "36px",
             "font-weight": "200",
-            "line-height": "64px",
+            "line-height": "74px",
             "color": "@color-swatch1",
             "letter-spacing": "inherit"
         },
