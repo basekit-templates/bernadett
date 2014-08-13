@@ -72,6 +72,7 @@
 .widget {
 	&.logo, &.companyname {
 		display: inline-block;
+        vertical-align: middle;
 	}
 	&.logo {
 		margin-right: 2px;
@@ -84,6 +85,7 @@
 	&.companyname {
 		a {
 			@media @mobile {
+                max-width: 70%;
 				font-size: bkscale(@font-swatch10-font-size, 0.96);
 			}
 		}
@@ -659,6 +661,7 @@ body.menu-active .bk-nav {
 
 .widget.ecombasketsummary {
     margin-bottom: 30px;
+    margin-top: 100px;
     // Image Wrap
     .image-wrap {
         background-position: -10000%;
@@ -683,13 +686,13 @@ body.menu-active .bk-nav {
         font-weight: @font-swatch4-font-weight;
         line-height: @font-swatch4-line-height;
         letter-spacing: @font-swatch4-letter-spacing;
-        color: @font-swatch4-color;
+        color: darken(@font-swatch4-color, 10%);
     }
     // Product Name
     .basket-summary-productname {
         display: block;
         line-height: 24px;
-        color: @color-swatch2;
+        color: darken(@font-swatch2-color, 10%);
         &:hover {
             text-decoration: underline;
         }
