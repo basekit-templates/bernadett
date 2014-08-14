@@ -639,6 +639,7 @@ body.menu-active .bk-nav {
 .widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation select {
     -webkit-appearance: none;
     width: 100%;
+    margin-bottom: 20px;
 }
 
 .widget.ecombasket .ecombasket-pull {
@@ -650,10 +651,29 @@ body.menu-active .bk-nav {
     text-align: left;
 }
 
-.btn {
+.btn.ecom-product-add-to-cart-btn, .btn.ecom-product-go-to-checkout-btn {
     border-radius: 5px;
     box-shadow: 0px 2px 0px darken(@color-swatch3,10%);
-    padding: 3px 14px;
+    padding: 10px 15px;
+    text-decoration: none;
+    margin-bottom: 10px;
+    float: left;
+    &:hover {
+        background-color: @font-swatch7-background-color-hover;
+    }
+}
+
+.ecom-product-go-to-checkout-btn-wrapper {
+    float: left;
+    width: 100%;
+    .btn.ecom-product-go-to-checkout-btn {
+        font-weight: 600;
+    }
+}
+
+.widget.ecomproduct .ecom-product .ecom-product-cattag {
+    float: left;
+    width: 100%;
 }
 
 .ecombasket-checkout-link {
@@ -864,6 +884,13 @@ body.menu-active .bk-nav {
 
 
 /* 10. Forms & Buttons */
+
+.btn {
+    border-radius: 5px;
+    box-shadow: 0px 2px 0px darken(@color-swatch3,10%);
+    padding: 3px 14px;
+}
+
 
 .widget.button {
     button.btn {
