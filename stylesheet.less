@@ -679,6 +679,10 @@ body.menu-active .bk-nav {
     width: 100%;
 }
 
+.ecom-product-long-description {
+    margin-top: 20px;
+}
+
 .ecombasket-checkout-link {
     border-radius: 5px;
     box-shadow: 0px 2px 0px darken(@color-swatch3,10%);
@@ -900,6 +904,9 @@ body.menu-active .bk-nav {
     border-radius: 5px;
     box-shadow: 0px 2px 0px darken(@color-swatch3,10%);
     padding: 3px 14px;
+    &:hover {
+        background-color: @font-swatch7-background-color-hover;
+    }
 }
 
 
@@ -984,6 +991,21 @@ input, textarea {
             text-decoration: none;
             height: 45px;
             position: relative;
+        }
+    }
+}
+
+.widget.clicktocall a {
+    @media @mobile {
+        border-radius: 5px;
+        box-shadow: 0px 2px 0px darken(@color-swatch3,10%);
+        background-position: 10px;
+        background-repeat: no-repeat;
+        padding: 10px 10px 10px 38px;
+        border: 0;
+        text-decoration: none;
+        &:hover {
+            background-color: @font-swatch7-background-color-hover;
         }
     }
 }
