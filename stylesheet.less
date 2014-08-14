@@ -746,7 +746,6 @@ body.menu-active .bk-nav {
         }
         .quantity-number {
             position: relative;
-            top: -1px;
             background-color: darken(@color-swatch1,3%);
             padding: 1px 10px;
             font-size: 14px;
@@ -759,8 +758,7 @@ body.menu-active .bk-nav {
             border: 0;
             box-shadow: none;
             background-color: lighten(@color-swatch5,15%);
-            font-size: 13px;
-            font-family: @font-swatch4-font-family;
+            font-family: inherit;
             color: @color-swatch1;
             &:hover {
                 background-color: @color-swatch2;
@@ -882,6 +880,16 @@ body.menu-active .bk-nav {
     }
 }
 
+.widget.ecombasketsummary .btn.basket-summary-submit {
+    border-radius: 5px;
+    box-shadow: 0px 2px 0px darken(@color-swatch3,10%);
+    padding: 10px 15px;
+    text-decoration: none;
+    margin-bottom: 10px;
+    &:hover {
+        background-color: @font-swatch7-background-color-hover;
+    }
+}
 
 /* 10. Forms & Buttons */
 
