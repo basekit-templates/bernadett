@@ -626,6 +626,12 @@ body.menu-active .bk-nav {
   }
 }
 
+.widget.ecomproductslist .ecom-productslist-products .productlist-filter .productlist-display-form .productlist-search button.btn {
+    position: relative;
+    top: -1px;
+    height: 38px;
+}
+
 
     // Select
     .ecom-product-info .ecom-product-variation select {
@@ -886,7 +892,12 @@ body.menu-active .bk-nav {
 /* 10. Forms & Buttons */
 
 .widget.button {
-	padding-top: 10px 0;
+    button.btn {
+        padding: 10px;
+        &:hover {
+            background-color: @font-swatch7-background-color-hover;
+        }
+    }
 }
 
 .widget.button button .widget.dropbox button {
@@ -917,32 +928,20 @@ input, textarea {
             }
         }
     }
-    &.profile {
-        form {
-            button {
-                position: relative;
-                left: -5px;
-                top: 2px;
-                
-
-            }
-            fieldset input {
-                background-color: white;
-                border: 1px solid fade(@color-swatch5, 25%);
-                border-radius: 4px;
-                text-indent: 1px;
-            }
-        }
-    }
-    &.signupform fieldset {
+    &.signupform fieldset, &.profile form fieldset {
         button {
-            height: 45px;
+            height: 43px;
             width: 65px;
             position: relative;
         }
         input {
+            background-color: rgba(0,0,0, 0.02);
             border: 1px solid fade(@color-swatch5, 25%);
+            border-radius: 6px;
             width: 50%;
+            margin-right: 5px;
+            height: 45px;
+            margin-bottom: 5px;
             @media @tablet {
                 width: 65%;
             }
