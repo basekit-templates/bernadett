@@ -48,7 +48,7 @@
 		z-index: 9999;
 		@media @mobile {
 			left: 0;
-			width: 70%;
+			width: 80%;
 		}
 	}
 	#main {
@@ -59,11 +59,7 @@
 .bk-header {
 	background: lighten(@color-swatch6, 5%);
 	padding: 30px;
-	position: fixed;
-	right: 0;
-	top: 0;
 	width: 100%;
-	z-index: 9999;
 	@media @mobile {
 		padding: 20px 30px;
 	}
@@ -82,7 +78,6 @@
 		}
 	}
 	&.companyname a {
-
 			@media @mobile {
                 max-width: 70%;
 				font-size: bkscale(@font-swatch10-font-size, 0.96);
@@ -102,11 +97,12 @@
     .widget.socialicons {
     	background: @color-swatch6;
     	border-left: 1px solid darken(@color-swatch6, 50%);
+        float: left;
     	padding: 30px 15px;
     	margin: 0;
+        width: 100%;
     }
 	@media only screen and (max-height: 450px) {
-		position: absolute;
 		height: auto;
 	}
     /*&:after {
@@ -130,7 +126,7 @@
 .widget.extendednavigation {
 	background: @color-swatch6;
 	border-left: 1px solid darken(@color-swatch6, 50%);
-	display: table;
+	float: left;
 	padding: 30px 15px;
 	width: 100%;
     ul {
@@ -198,14 +194,13 @@
 		background-color: fade(@color-swatch6, 15%);
 		border: 1px solid fade(@color-swatch1, 20%);
 		.border-radius(6px 0 0 6px);
-		padding: 12px 11px 0;
+		padding: 15px 11px 0;
 		position: absolute;
 		right: 320px;
-		top: 29px; 
+		top: 30px; 
 		display: inline-block;
 		width: 90px;
 		height: 45px;
-		text-indent: -900em;
 		overflow: hidden;
 		cursor: pointer;
 		outline: none;
@@ -251,11 +246,11 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 	display: block!important;
 }
 
-body.menu-active .widget.extendednavigation#slide-menu { 
+.menu-active .widget.extendednavigation#slide-menu { 
 	right: 0px; 
 }
 
-body.menu-active #main, body.menu-active .bk-header { 
+.menu-active #main, .menu-active .bk-header { 
 	right: 320px; 
 	.transition( all, 0.5s, ease);
     -webkit-backface-visibility: hidden;
@@ -264,14 +259,17 @@ body.menu-active #main, body.menu-active .bk-header {
     }
 }
 
-body #main, body .bk-header {
+#main, .bk-header, .bk-pt-home #main .widget.feature.bk-tpl-hidden + .bk-header {
 	.transition( all, 0.5s, ease);
 	-webkit-backface-visibility: hidden;
 }
 
-body.menu-active .bk-nav { 
-	position: absolute;
-	right: 0; 
+.menu-active .bk-nav { 
+	display: table;
+    height: 100%;
+    position: absolute;
+    right: 0; 
+    .transition( all, 0.5s, ease);
 }
 
 @-webkit-keyframes huerotate {
@@ -382,18 +380,28 @@ body.menu-active .bk-nav {
 }
 
 #main {
+    display: block;
 	padding-top: 100px;
     position: fixed;
     top: 0;
     right: 0;
     width: 100%;
     height: 100%;
-    overflow: scroll;
+    overflow-y: scroll;
     background: #fcfeff;
+    -webkit-overflow-scrolling: touch;
     .border-radius(0px);
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+}
+
+.bk-pt-home #main .widget.feature.bk-tpl-hidden + .bk-header {
+    background: lighten(@color-swatch6, 5%);
+    padding: 30px;
+    position: relative;
+    right: 0!important;
+    width: 100%;
 }
 
 /* 6. Footer */
