@@ -17,8 +17,8 @@
 /* 1. Imports & Includes */
 
 @import "@{templateCommon}/basekit-bootstrap.less";
-@tablet: "only screen and (max-width: 860px)";
-@mobile: "only screen and (max-width: 650px)";
+@tablet: ~"only screen and (max-width: 860px)";
+@mobile: ~"only screen and (max-width: 650px)";
 
 /* 2. Mixins */
 
@@ -461,6 +461,12 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
     }
 }
 
+.widget.blogsearch button {
+    &:hover {
+        background-color:@font-swatch7-background-color-hover;
+    }
+}
+
 /* 8. Menu */
 
 .widget {
@@ -689,6 +695,17 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
     box-shadow: 0px 2px 0px darken(@color-swatch3,10%);
 }
 
+.form-group.productlist-search button.btn {
+    padding: 8px 14px 5px;
+}
+
+.widget.ecomproduct .ecom-product .btn {
+    padding:10px;
+    &:hover {
+        text-decoration:none;
+    }
+}
+
 
 // Basket Summary
 // -----------------------------
@@ -862,10 +879,12 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
     // Continue to Payment Button
     .basket-summary-submit {
         margin-bottom: 30px;
+        background-color:@color-swatch3;
+        padding:10px;
         &:disabled {
             opacity: 0.2;
             &:hover {
-                background-color: @color-swatch1;
+                 background-color:@font-swatch7-background-color-hover;
             }
         }
     }
@@ -1126,6 +1145,12 @@ hr.line {
     box-shadow: 0px 2px 0px darken(@color-swatch3,10%);
 }
 
+.blog-search-form label {
+    @media @tablet {
+        display:block;
+    }
+}
+
 .widget.tweet a {
     border-radius: 6px;
     box-shadow: 0px 2px 0px darken(@color-swatch3,10%);
@@ -1145,8 +1170,7 @@ hr.line {
 }
 
 .widget.twitter a:hover {
-    color: #fff;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 .widget.twitter ul {
