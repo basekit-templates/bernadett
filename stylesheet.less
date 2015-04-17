@@ -1,4 +1,4 @@
-/* 
+/*
 
 1. Imports & Includes
 2. Mixins
@@ -29,10 +29,10 @@
 }
 
 .transition (@prop: all, @time: 0.5s, @ease: ease) {
-	-webkit-transition: @prop @time @ease;  
+	-webkit-transition: @prop @time @ease;
 	-moz-transition:    @prop @time @ease;
-	-ms-transition:     @prop @time @ease; 
-	-o-transition:      @prop @time @ease;  
+	-ms-transition:     @prop @time @ease;
+	-o-transition:      @prop @time @ease;
 }
 
 /* 3. Header & Navigation */
@@ -154,7 +154,7 @@
 	            text-transform: none;
 	            line-height: 1em;
         	}
-            &:hover { 
+            &:hover {
             	.transition( all, 0.5s, ease);
             	ul {
             		background: transparent;
@@ -198,7 +198,7 @@
 		padding: 15px 11px 0;
 		position: absolute;
 		right: 360px;
-		top: 45px; 
+		top: 45px;
 		display: inline-block;
 		width: 45px;
 		height: 45px;
@@ -240,7 +240,7 @@
 div.widget .extendednavigation ul, div.widget.extendednavigation ul {
 	display: block;
 	li {
-		display: block; 
+		display: block;
 	}
 }
 
@@ -248,12 +248,12 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 	display: block!important;
 }
 
-.menu-active .widget.extendednavigation#slide-menu { 
-	right: 0px; 
+.menu-active .widget.extendednavigation#slide-menu {
+	right: 0px;
 }
 
-.menu-active #main, .menu-active .bk-header { 
-	right: 320px; 
+.menu-active #main, .menu-active .bk-header {
+	right: 320px;
 	.transition( all, 0.5s, ease);
     -webkit-backface-visibility: hidden;
     @media @mobile {
@@ -266,11 +266,11 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 	-webkit-backface-visibility: hidden;
 }
 
-.menu-active .bk-nav { 
+.menu-active .bk-nav {
 	display: table;
     height: 100%;
     position: absolute;
-    right: 0; 
+    right: 0;
     .transition( all, 0.5s, ease);
 }
 
@@ -312,7 +312,6 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 	background: -o-linear-gradient(bottom,  rgba(26,120,132,0.5) 0%,rgba(125,185,232,0) 100%); /* Opera 11.10+ */
 	background: -ms-linear-gradient(bottom,  rgba(26,120,132,0.5) 0%,rgba(125,185,232,0) 100%); /* IE10+ */
 	background: linear-gradient(to top,  rgba(26,120,132,0.5) 0%,rgba(125,185,232,0) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a7884', endColorstr='#007db9e8',GradientType=0 ); /* IE6-9 */
 
 	padding: 100px 20px 26px;
 	text-align: center;
@@ -551,7 +550,7 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
             }
         }
         .menu-section-item-dietary-props .dietary-icon {
-            
+
         }
     }
     .menu-subsection-name {
@@ -724,7 +723,7 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
                 max-width: 100%!important;
             }
         }
-        @media (max-width: 360px) { 
+        @media (max-width: 360px) {
             max-width: 100%;
         }
     }
@@ -789,7 +788,7 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
                 outline: none;
             }
         }
-    }   
+    }
     // Table
     table {
         margin: 20px 0 30px;
@@ -890,7 +889,7 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
             }
         }
     }
-    // 
+    //
     .js-shipping-opts {
         border-bottom: 1px solid darken(@color-swatch1,10%);
         padding-bottom: 20px;
@@ -950,7 +949,7 @@ input, textarea {
 .widget {
     &.contactform {
         input, textarea {
-           
+
             &.email {
                 @media @mobile {
                     width: 70%;
@@ -1055,7 +1054,7 @@ hr.line {
     }
     .content-wrapper {
         background: rgba(0,0,0,0.5);
-        
+
     }
     .slideshow-widget {
         /* Arrows */
@@ -1170,7 +1169,7 @@ hr.line {
   font-weight: @font-swatch5-font-weight;
   color: @color-swatch5;
   font-size: 12px;
-  
+
   text-decoration: none;
 }
 
@@ -1215,7 +1214,7 @@ hr.line {
   font-size: @font-swatch5-font-size;
   color: @color-swatch3;
   padding-bottom: 4px;
-  
+
   letter-spacing: 0.05em;
 }
 
