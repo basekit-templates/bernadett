@@ -1,7 +1,7 @@
 {
     "name":"Bernadett",
     "thumbnail":"bernadett.png",
-    "screenshot":"bernadett.png",
+    "screenshot":"bernadett-screenshot.jpg",
     "templateType":"standard",
     "pageTypes": ["home"],
     "tags": {
