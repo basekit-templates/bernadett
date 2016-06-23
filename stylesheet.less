@@ -206,9 +206,26 @@
 		cursor: pointer;
 		outline: none;
 		.transition(all, 0.5s, ease);
+	    @media @tablet {
+	    	background-color: fade(@color-swatch6, 15%);
+		border: 1px solid fade(@color-swatch1, 20%);
+		.border-radius(6px);
+		padding: 15px 11px 0;
+		position: absolute;
+		right: 360px;
+		top: 45px;
+		display: inline-block;
+		width: 45px;
+		height: 45px;
+		overflow: hidden;
+		cursor: pointer;
+		outline: none;
+		.transition(all, 0.5s, ease);
+	    }
+	    }
 	    @media @mobile {
-	    	right: 248px;
-            top: 30px;
+	    	right: 265px;
+                top: 35px;
 	    }
 	    &:hover {
 	    	background-color: fade(@color-swatch6, 25%);
