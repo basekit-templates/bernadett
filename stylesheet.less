@@ -658,7 +658,6 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
   }
 }
 
-
     // Select
     .ecom-product-info .ecom-product-variation select {
         display: block;
@@ -923,7 +922,8 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 
 /* 10. Forms & Buttons */
 
-.btn {
+.btn,
+.advancedcontactform fieldset button {
     border-radius: 5px;
     box-shadow: 0px 2px 0px darken(@color-swatch3,10%);
     padding: 3px 14px;
@@ -956,18 +956,20 @@ input, textarea {
 	}
 }
 
-.contactform label {
+.contactform label,
+.advancedcontactform .form-group>label {
 	padding-top: 10px;
 }
 
-.contactform button.btn {
+.contactform button.btn,
+.advancedcontactform fieldset button {
     margin-top: 10px;
 }
 
 .widget {
-    &.contactform {
+    &.contactform,
+    &.advancedcontactform {
         input, textarea {
-
             &.email {
                 @media @mobile {
                     width: 70%;
@@ -978,7 +980,7 @@ input, textarea {
     &.signupform fieldset, &.profile form fieldset {
         button {
             height: 43px;
-            width: 65px;
+            width: auto;
             position: relative;
         }
         input {
@@ -1004,6 +1006,7 @@ input, textarea {
             border: 1px solid fade(@color-swatch5, 25%);
             height: 45px;
             line-height: 45px;
+            margin-right: 5px;
             @media @mobile {
                 width: 100%;
             }
@@ -1023,6 +1026,43 @@ input, textarea {
             position: relative;
         }
     }
+}
+
+.advancedcontactform form select {
+    -moz-appearance: none;
+    text-indent: 0.01px;
+    text-overflow: '';
+    cursor: pointer;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: right center;
+    margin: 0;
+    color: @color-swatch5;
+    position: relative;
+    display: inline-block;
+    font-family: @font-swatch7-font-family;
+    font-size: @font-swatch7-font-size;
+    font-weight: @font-swatch7-font-weight;
+    line-height: 21px;
+    webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid darken(@color-swatch2, 10%);
+    background-color: lighten(@color-swatch7, 3%);
+    padding: 8px 8px 8px 14px;
+    text-indent: 0;
+    letter-spacing: 0;
+    float: none;
+    height: 41px;
+
+    @media @mobile {
+      display: block;
+      width: 100%;
+    }
+}
+
+.advancedcontactform .option-list {
+    padding: 1em 0;
 }
 
 .widget.clicktocall a {
